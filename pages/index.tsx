@@ -1,6 +1,8 @@
 import type { NextPage } from 'next'
 import Head from 'next/head'
 import Image from 'next/image'
+import RequestTracker from '../Learn-React/Queue'
+import Queue from '../Learn-React/Queue'
 
 const Home: NextPage = () => {
   return (
@@ -14,6 +16,9 @@ const Home: NextPage = () => {
         <h1 className="text-6xl font-bold">
           Rajan
         </h1>
+        {/* <TrafficLight /> */}
+        {/* <Queue /> */}
+        <RequestTracker />
       </main>
         
     </div>
