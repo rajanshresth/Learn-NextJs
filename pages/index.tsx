@@ -5,6 +5,7 @@ import RequestTracker from '../Learn-React/Queue'
 import UpdateObj from '../Learn-React/UpdateObj'
 import SpreadSyntax from '../Learn-React/SpreadSyntax'
 import Queue from '../Learn-React/Queue'
+import ShoppingCart from '../Learn-React/UpdateArray'
 
 const Home: NextPage = () => {
   return (
@@ -23,6 +24,7 @@ const Home: NextPage = () => {
         {/* <RequestTracker /> */}
         {/* <UpdateObj /> */}
         {/* <SpreadSyntax /> */}
+        <ShoppingCart />
       </main>
         
     </div>
