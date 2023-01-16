@@ -2,6 +2,8 @@ import type { NextPage } from 'next'
 import Head from 'next/head'
 import Image from 'next/image'
 import RequestTracker from '../Learn-React/Queue'
+import UpdateObj from '../Learn-React/UpdateObj'
+import SpreadSyntax from '../Learn-React/SpreadSyntax'
 import Queue from '../Learn-React/Queue'
 
 const Home: NextPage = () => {
@@ -18,7 +20,9 @@ const Home: NextPage = () => {
         </h1>
         {/* <TrafficLight /> */}
         {/* <Queue /> */}
-        <RequestTracker />
+        {/* <RequestTracker /> */}
+        {/* <UpdateObj /> */}
+        {/* <SpreadSyntax /> */}
       </main>
         
     </div>
