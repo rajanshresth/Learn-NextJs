@@ -1,7 +1,9 @@
 import type { NextPage } from 'next'
 import Head from 'next/head'
+import TodosList from '../Todos/TodosList'
 
 const Home: NextPage = () => {
+
   return (
     <div className="flex min-h-screen flex-col items-center justify-center py-2">
       <Head>
@@ -11,8 +13,9 @@ const Home: NextPage = () => {
 
       <main>
         <h1 className="text-6xl font-bold">
-          Rajan
+          Todos
         </h1>
+        <TodosList />
         
       </main>
         
