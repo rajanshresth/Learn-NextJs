@@ -43,19 +43,16 @@ const handleChangeTodo = (nextTodo:Todo) => {
     }
   }));
 
-}
-console.log(todos)
-
-
+};
   return (
-    <div className="flex min-h-screen flex-col items-center justify-center py-2">
+    <div className="bg-blue-300 h-screen flex items-center justify-center">
       <Head>
         <title>Create Next App</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
       <main>
-        <h1 className="text-6xl font-bold">
+        <h1 className="text-3xl bold">
           Todos
         </h1>
         <AddTodos

@@ -3,7 +3,7 @@ import { useState } from 'react'
 import Task from './Task'
 
 interface TodosListProps {
-    todos: [{ title: string, done: boolean, id: number }];
+    todos: { title: string, done: boolean, id: number }[];
     onChangeTodo: (nextTodo: { title: string, done: boolean, id: number }) => void;
     onRemoveTodo: (index: number) => void;
 }

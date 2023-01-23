@@ -11,43 +11,47 @@ export default function Task({todo,onChange,onRemove}:TaskProps) {
     if (isEditing) {
         todoContent = (
             <>
-                <input
-
-                    value={todo.title}
-                    onChange={e => onChange({
-                        ...todo,
-                        title: e.target.value
-                    })}
-                />
-                <button onClick={()=>setIsEditing(false)}>
-                    Save
-                </button>
+                <div className=''>
+                    <input
+                        value={todo.title}
+                        onChange={e => onChange({
+                            ...todo,
+                            title: e.target.value
+                        })}/>
+                    <button 
+                    className=' rounded-full'
+                    onClick={()=>setIsEditing(false)}>
+                        Save
+                    </button>
+                </div>
             </>
         )
     } else {
         todoContent = (
             <>
-                <span>{todo.title}</span>
-                <button onClick={()=>setIsEditing(true)}>
-                    Edit
-                </button>
+                <div className=''>
+                    <span>{todo.title}</span>
+                    <button 
+                    className=' rounded-full'
+                    onClick={()=>setIsEditing(true)}>
+                        Edit
+                    </button>
+                </div>
             </>
         );
     }
 
-    console.log(todoContent)
-
   return (
     <div>
          <label>
-            <input type="checkbox"
+            {/* <input type="text"
                 checked={todo.done}
                 onChange={
                     e => onChange({
                         ...todo,
                         done: e.target.checked
                     })
-                } />
+                } /> */}
             {todoContent}
             <button onClick={() => onRemove(todo.id)}>Remove</button>
         </label>
