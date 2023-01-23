@@ -1,13 +1,10 @@
 import React from 'react'
 import { useState } from 'react'
-
-type Todo = [{ title: string, done: boolean, id: number }]
 interface AddTodosProps {
     onAddTodos: (title: string) => void;
-    todos: Todo;
     }
 
-export default function AddTodos({onAddTodos,todos}:AddTodosProps) {
+export default function AddTodos({onAddTodos}:AddTodosProps) {
     const [title,setTitle]=useState('')
   return (
     <div>
@@ -20,20 +17,9 @@ export default function AddTodos({onAddTodos,todos}:AddTodosProps) {
             onClick={()=>{
                 setTitle('');
                 onAddTodos(title)
-            }
-        }
-        >
+            }}>
             Add
         </button>      
-
-        <div>
-            <ul>
-                {todos.map((todo,index)=>(
-                    <li key={index}>{todo.title}</li>
-                    
-                ))}
-            </ul>
-        </div>  
     </div>
   )
 }

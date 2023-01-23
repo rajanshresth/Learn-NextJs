@@ -60,7 +60,6 @@ console.log(todos)
         </h1>
         <AddTodos
           onAddTodos={handleAddTodo}
-          todos={todos}
           />
         <TodosList 
             todos={todos}

@@ -11,7 +11,6 @@ export default function Task({todo,onChange,onRemove}:TaskProps) {
     if (isEditing) {
         todoContent = (
             <>
-
                 <input
 
                     value={todo.title}
@@ -35,6 +34,8 @@ export default function Task({todo,onChange,onRemove}:TaskProps) {
             </>
         );
     }
+
+    console.log(todoContent)
 
   return (
     <div>
