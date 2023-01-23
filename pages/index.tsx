@@ -1,8 +1,51 @@
+import { useState } from 'react'
 import type { NextPage } from 'next'
 import Head from 'next/head'
-import TodosList from '../Todos/TodosList'
+import TodosList from '../TODO/TodosList'
+import AddTodos from '../TODO/AddTodos'
+
+type Todo = {
+  id: number,
+  title: string,
+  done: boolean
+}
+
+let nextId = 3;
+const initialTodos = [
+  { id: 0, title: 'Buy milk', done: true },
+  { id: 1, title: 'Eat tacos', done: false },
+  { id: 2, title: 'Brew tea', done: false },
+];
 
 const Home: NextPage = () => {
+  const [todos,setTodos]=useState(initialTodos)
+
+  const handleAddTodo=(title:string)=>{
+    setTodos([...todos, {
+      id: nextId++,
+      title: title,
+      done: false
+    }])
+  }
+  
+  
+  const handleRemoveTodo = (id: number) => {
+    setTodos(todos.filter((todo) => todo.id !== id));
+  };
+  
+
+const handleChangeTodo = (nextTodo:Todo) => {
+  setTodos(todos.map(t => {
+    if (t.id === nextTodo.id) {
+      return nextTodo;
+    } else {
+      return t;
+    }
+  }));
+
+}
+console.log(todos)
+
 
   return (
     <div className="flex min-h-screen flex-col items-center justify-center py-2">
@@ -15,10 +58,16 @@ const Home: NextPage = () => {
         <h1 className="text-6xl font-bold">
           Todos
         </h1>
-        <TodosList />
-        
+        <AddTodos
+          onAddTodos={handleAddTodo}
+          todos={todos}
+          />
+        <TodosList 
+            todos={todos}
+            onChangeTodo={handleChangeTodo}
+            onRemoveTodo={handleRemoveTodo}
+        /> 
       </main>
-        
     </div>
   )
 }
