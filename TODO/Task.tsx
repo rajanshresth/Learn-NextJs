@@ -11,8 +11,8 @@ export default function Task({todo,onChange,onRemove}:TaskProps) {
     const [isEditing, setIsEditing] = useState(false);
     const [title, setTitle] = useState(todo.title);
 
-    console.log(todo.title)
-    console.log(todo.id)
+    console.log( `todo.title: ${todo.title}`)
+    console.log(`todo.id: ${todo.id}`)
   return (
     <div className='flex flex-col m-4'>
     <label className='flex flex-row items-center mb-2'>

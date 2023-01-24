@@ -17,7 +17,7 @@ export default function TodosList({todos,
 
         <ul>
             {todos.map((todo: { title: string; done: boolean; id: number; }) =>(
-              <li>
+              <li key={todo.id}>
                 <Task todo={todo}
                       onChange={onChangeTodo}
                       onRemove={onRemoveTodo} />

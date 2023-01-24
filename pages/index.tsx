@@ -22,7 +22,7 @@ const Home: NextPage = () => {
 
   const handleAddTodo=(title:string)=>{
     setTodos([...todos, {
-      id: ++nextId,
+      id: nextId++,
       title: title,
       done: false
     }])
