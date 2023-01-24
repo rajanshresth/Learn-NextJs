@@ -10,7 +10,7 @@ type Todo = {
   done: boolean
 }
 
-let nextId = 3;
+let nextId = 2;
 const initialTodos = [
   { id: 0, title: 'Buy milk', done: true },
   { id: 1, title: 'Eat tacos', done: false },
@@ -22,7 +22,7 @@ const Home: NextPage = () => {
 
   const handleAddTodo=(title:string)=>{
     setTodos([...todos, {
-      id: nextId++,
+      id: ++nextId,
       title: title,
       done: false
     }])
