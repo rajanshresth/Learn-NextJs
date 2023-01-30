@@ -6,9 +6,18 @@
     "start": "next start"
   },
   "dependencies": {
+    "@capacitor/cli": "^4.6.2",
+    "@capacitor/core": "^4.6.2",
+    "@firebase/app-types": "^0.9.0",
+    "@firebase/auth": "^0.21.1",
+    "@types/firebase": "^3.2.1",
+    "firebase": "^9.16.0",
+    "isomorphic-fetch": "^3.0.0",
     "next": "latest",
     "react": "18.2.0",
     "react-dom": "18.2.0",
+    "react-firebase-hooks": "^5.1.1",
+    "react-hook-form": "^7.42.1",
     "use-immer": "^0.8.1"
   },
   "devDependencies": {
